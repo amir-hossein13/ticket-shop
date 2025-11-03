@@ -3,9 +3,51 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Yekan Bakh';
+  src: url('/fonts/YekanBakh04Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yekan Bakh';
+  src: url('/fonts/YekanBakh05Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yekan Bakh';
+  src: url('/fonts/YekanBakh06Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1b1b1b;
+  /* Track color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  /* Thumb color */
+  border-radius: 10px;
+  border: 2px solid #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
+
 :root {
   /* === Primary === */
-  --primary: oklch(0.205 0 0);
+  --primary: #1D91CC;
   --primary-tint-1: #EBF4FA;
   --primary-tint-2: #D2E9F5;
   --primary-tint-3: #BBDEF0;
@@ -28,7 +70,8 @@
   --gray-8: #404040;
   --gray-9: #202020;
   --black: #0C0C0C;
-
+  
+  --font-yekan: 'Yekan Bakh', sans-serif;
   /* === Semantic Colors === */
   --error: #C30000;
   --error-light-1: #ED2E2E;
@@ -37,7 +80,6 @@
   --success: #00966D;
   --success-light-1: #00BA88;
   --success-light-2: #F3FDFA;
-
   --warning: #A9791C;
   --warning-light-1: #F4B740;
   --warning-light-2: #FFF8E1;
